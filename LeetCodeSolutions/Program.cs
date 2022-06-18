@@ -58,16 +58,16 @@ namespace LeetCodeSolutions
         }
 
         // 12. Integer to Roman
-        // TODO : subscribe to leetcode?
+        // Other methods are available, but the gist is right
         public string IntToRoman(int num)
         {
             string result = "";
-            char[] sChar = num.ToString().ToCharArray();
+            string[] sChar = num.ToString().ToCharArray().Select(c => c.ToString()).ToArray(); ;
             double tenPowerOf = sChar.Length - 1;
 
-            foreach (char c in sChar)
+            foreach (string c in sChar)
             {
-                int lookupValue = int.Parse(c.ToString()) * (int)Math.Pow(10, tenPowerOf);
+                int lookupValue = int.Parse(c) * (int)Math.Pow(10, tenPowerOf);
 
                 if (lookupValue != 0) 
                     result += Dictionaries.intToRomanNumeral[lookupValue];

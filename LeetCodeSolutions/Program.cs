@@ -12,6 +12,8 @@ namespace LeetCodeSolutions
         }
 
         //13. Roman to Integer
+        // Feedback after looking at hints: Would be better to iterate right to left
+        //  But the gist is right
         public int RomanToInt(string s)
         {
             int solution = 0;

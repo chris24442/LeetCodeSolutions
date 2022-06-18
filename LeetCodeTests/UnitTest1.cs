@@ -4,7 +4,7 @@ using LeetCodeSolutions;
 namespace LeetCodeTests
 {
     [TestClass]
-    public class UnitTest1
+    public class RomanToIntTests
     {
         [TestMethod]
         public void RomanToIntExampleTest1()
@@ -36,15 +36,10 @@ namespace LeetCodeTests
             Assert.AreEqual(1994, result);
         }
 
-        [TestMethod]
-        public void RomanToIntEmptyTest()
-        {
-            var program = new LeetCodeSolutions.Program();
+        //public void RomanToIntEmptyTest() // this test was removed because it is guaranteed the answer is valid between 1 and 3999
 
-            int result = program.RomanToInt("");
-
-            Assert.AreEqual(0, result);
-        }
+        // TODO: Add RomanToIntLargeNumberTest()
+        // but I couldn't work out how large roman numerals work
 
         [TestMethod]
         public void RomanToIntUpToTenTest()

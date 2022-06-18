@@ -69,20 +69,36 @@ namespace LeetCodeSolutions
             {
                 int lookupValue = int.Parse(c) * (int)Math.Pow(10, tenPowerOf);
 
-                if (lookupValue != 0) 
+                if (lookupValue != 0)
                     result += Dictionaries.intToRomanNumeral[lookupValue];
 
                 tenPowerOf--;
             }
-            
+
             return result;
         }
 
         // 273. Integer to English Words
         public string NumberToWords(int num)
         {
+            // input: 012345678
+            // create int[] = 0, 123, 456, 789
+            // R to L
+            //   call threeDigitNumberToWords
+            //  append 'thousand' or 'million' from dictionary.
+
             return "";
         }
+
+        // public string threeDigitNumberToWords (int num)
+        //{
+        //  to string
+        //  R to L
+        // Lookup digit in dictionary
+        // lookup tens
+        // lookup thousands
+        // return;
+        //}
 
     }
 }

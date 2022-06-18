@@ -85,7 +85,7 @@ namespace LeetCodeSolutions
                 {4, "IV"},
                 {5, "V" },
                 {6, "VI"},
-                {7, "VI"},
+                {7, "VII"},
                 {8 , "VIII"},
                 {9, "IX"},
                 {10, "X" },
@@ -109,20 +109,23 @@ namespace LeetCodeSolutions
                 {1000, "M" },
                 {2000, "MM"},
                 {3000 , "MMM"},
-                //{4000, "CD"},
-                //{5000, "D" },
-                //{6000, "DC"},
-                //{7000, "DCC"},
-                //{8000, "DCCC"},
-                //{9000, "CM"},
                 };
 
-            //411 splits into 400 and 10 and 1
+            string result = "";
+            char[] sChar = num.ToString().ToCharArray();
+            double tenPowerOf = sChar.Length - 1;
 
-            //input
+            foreach (char c in sChar)
+            {
+                int lookupValue = int.Parse(c.ToString()) * (int)Math.Pow(10, tenPowerOf);
 
+                if (lookupValue != 0) 
+                    result += romanNumeralValues[lookupValue];
 
-            return "";
+                tenPowerOf--;
+            }
+            
+            return result;
         }
 
     }

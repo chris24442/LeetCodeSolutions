@@ -41,6 +41,8 @@ namespace LeetCodeTests
         // TODO: Add RomanToIntLargeNumberTest()
         // but I couldn't work out how large roman numerals work
 
+        // Looks like the test data doesen't include 'Vinculum'
+
         [TestMethod]
         public void RomanToIntUpToTenTest()
         {
@@ -125,9 +127,6 @@ namespace LeetCodeTests
             Assert.AreEqual(2001, program.RomanToInt("MMI"));
             Assert.AreEqual(2002, program.RomanToInt("MMII"));
             Assert.AreEqual(2100, program.RomanToInt("MMC"));
-            Assert.AreEqual(4000, program.RomanToInt("MMM"));
-            Assert.AreEqual(4000, program.RomanToInt("MV"));
-            Assert.AreEqual(5000, program.RomanToInt("V"));
         }
     }
 }

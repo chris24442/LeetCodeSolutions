@@ -16,6 +16,7 @@ namespace LeetCodeTests
             Assert.AreEqual("III", result);
         }
 
+        [TestMethod]
         public void IntToRomanExampleTest2()
         {
             var program = new LeetCodeSolutions.Program();
@@ -25,11 +26,22 @@ namespace LeetCodeTests
             Assert.AreEqual("LVIII", result);
         }
 
+        [TestMethod]
         public void IntToRomanExampleTest3()
         {
             var program = new LeetCodeSolutions.Program();
 
             string result = program.IntToRoman(1994);
+
+            Assert.AreEqual("MCMXCIV", result);
+        }
+
+        [TestMethod]
+        public void IntToRomanLeadingZeroesTest3()
+        {
+            var program = new LeetCodeSolutions.Program();
+
+            string result = program.IntToRoman(01994);
 
             Assert.AreEqual("MCMXCIV", result);
         }

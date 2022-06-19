@@ -10,10 +10,6 @@ namespace LeetCodeTests
     [TestClass]
     public class PrintFooBarAlternativelyTests
     {
-        Action doWorkA = () => { Console.Write("First"); };
-        Action doWorkB = () => { Console.Write("Second"); };
-        Action doWorkC = () => { Console.Write("Third"); };
-
         [TestMethod]
         public void PrintFooBarAlternativelyTest1()
         {
@@ -21,9 +17,9 @@ namespace LeetCodeTests
             {
                 Console.SetOut(sw);
 
-                var a = new LeetCodeSolutions.PrintFooBarAlternatively.FooBar(2);
-
-                string expected = string.Format("FooBar");
+                var a = new LeetCodeSolutions.PrintFooBarAlternatively.FooBar(1);
+                Thread.Sleep(500);
+                string expected = string.Format("foobar");
                 Assert.AreEqual<string>(expected, sw.ToString());
             }
         }
@@ -35,24 +31,10 @@ namespace LeetCodeTests
             {
                 Console.SetOut(sw);
 
-                var a = new LeetCodeSolutions.PrintFooBarAlternatively.FooBar(2);
-                Thread.Sleep(50);
-
-                string expected = string.Format("FooBar");
-                Assert.AreEqual<string>(expected, sw.ToString());
-            }
-        }
-        [TestMethod]
-        public void PrintFooBarAlternativelyTest3()
-        {
-            using (StringWriter sw = new StringWriter())
-            {
-                Console.SetOut(sw);
-
-                var a = new LeetCodeSolutions.PrintFooBarAlternatively.FooBar(5);
+                var a = new LeetCodeSolutions.PrintFooBarAlternatively.FooBar(10);
                 Thread.Sleep(500);
 
-                string expected = string.Format("FooBarFooBarFoo");
+                string expected = string.Format("foobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobar");
                 Assert.AreEqual<string>(expected, sw.ToString());
             }
         }

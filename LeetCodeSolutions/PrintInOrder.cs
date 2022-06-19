@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace LeetCodeSolutions
 {
-    public class Concurrency19JUNE2022
+    public class PrintInOrder
     {
 
         // 1114. Print in Order
@@ -42,39 +42,6 @@ namespace LeetCodeSolutions
                 event_2.WaitOne();
                 // printThird() outputs "third". Do not change or remove this line.
                 printThird();
-            }
-        }
-
-        //1115. Print FooBar Alternately
-        public class FooBar
-        {
-            private int n;
-
-            public FooBar(int n)
-            {
-                this.n = n;
-            }
-
-            public void Foo(Action printFoo)
-            {
-
-                for (int i = 0; i < n; i++)
-                {
-
-                    // printFoo() outputs "foo". Do not change or remove this line.
-                    printFoo();
-                }
-            }
-
-            public void Bar(Action printBar)
-            {
-
-                for (int i = 0; i < n; i++)
-                {
-
-                    // printBar() outputs "bar". Do not change or remove this line.
-                    printBar();
-                }
             }
         }
 

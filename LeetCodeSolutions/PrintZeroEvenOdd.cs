@@ -11,6 +11,7 @@ namespace LeetCodeSolutions
     //1116. Print Zero Even Odd
     // TODO - simplify by removing count and length
     // For some reason does not work on leetCode, debugging is too limited to solve.
+    // Running multiple tests appear to interact with each other
     public class ZeroEvenOdd
     {
         private readonly int n;

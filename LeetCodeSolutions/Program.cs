@@ -81,24 +81,83 @@ namespace LeetCodeSolutions
         // 273. Integer to English Words
         public string NumberToWords(int num)
         {
-            // input: 012345678
-            // create int[] = 0, 123, 456, 789
-            // R to L
-            //   call threeDigitNumberToWords
-            //  append 'thousand' or 'million' from dictionary.
+            // 12345
+            string result = "";
+            string inputStr = num.ToString();
+            int numberSuffix = 1; // thousand / million etc
 
-            return "";
+            while (inputStr.Length >= 3)
+            {
+                string lastThreeDigits = inputStr.Substring(inputStr.Length - 3);
+                inputStr = inputStr.Substring(0, inputStr.Length - 3);
+
+                if (Convert.ToInt32(lastThreeDigits) == 0)
+                {
+                    numberSuffix *= 1000;
+                    continue;
+                }
+
+                if (numberSuffix != 1)
+                {
+                    result = threeDigitNumberToWords(Convert.ToInt32(lastThreeDigits)) + " " + Dictionaries.intToLongString[numberSuffix] + " " + result;
+                }
+                else
+                {
+                    result = threeDigitNumberToWords(Convert.ToInt32(lastThreeDigits));
+                }
+                numberSuffix *= 1000;
+            }
+
+            if (inputStr.Length % 3 == 0)
+                return result.Trim();
+
+            // add prefix
+            string prefixString = num.ToString().Substring(0, inputStr.Length % 3);
+
+            if (numberSuffix != 1)
+                result = threeDigitNumberToWords(Convert.ToInt32(prefixString)) + " " + Dictionaries.intToLongString[numberSuffix] + " " + result;
+            else
+                result = threeDigitNumberToWords(Convert.ToInt32(prefixString)) + result;
+
+            return result.Trim();
         }
 
-        // public string threeDigitNumberToWords (int num)
-        //{
-        //  to string
-        //  R to L
-        // Lookup digit in dictionary
-        // lookup tens
-        // lookup thousands
-        // return;
-        //}
+        public string threeDigitNumberToWords(int num)
+        {
+            // TODO: Test for valid input
+            string result = "";
+            int inputHundreds = HelperFunctions.RoundDown(num, 100) / 100;
+            string input = num.ToString();
+            if (input.Length == 3)
+            {
+                result += Dictionaries.intToLongString[inputHundreds] + " ";
+                result += "Hundred" + " ";
+                input = input[1..];
+                num = num % 100;
+            }
 
+            // where 100 is used, 00 does not need to be converted for display
+            if (Convert.ToInt32(input) == 0 && result != "")
+                return result.Trim();
+
+            if (input.Length == 2)
+            {
+                // works for teens
+                if (Dictionaries.intToLongString.ContainsKey(Convert.ToInt32(input)))
+                {
+                    result += Dictionaries.intToLongString[Convert.ToInt32(input)];
+                    return result.Trim();
+                }
+
+                // works for 67
+                int inputTens = HelperFunctions.RoundDown(num, 10);
+                result += Dictionaries.intToLongString[inputTens] + " ";
+                input = input[1..];
+            }
+            result += Dictionaries.intToLongString[Convert.ToInt32(input)] + " ";
+
+            // remove last character
+            return result.Trim();
+        }
     }
 }

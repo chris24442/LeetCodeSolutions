@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
+using System.Threading.Tasks; // not required on leetcode
 
 namespace LeetCodeSolutions
 {
@@ -15,16 +15,16 @@ namespace LeetCodeSolutions
         public class FooBar
         {
             private int n;
-            private Action printFoo = () => { Console.Write("foo"); };
-            private Action printBar = () => { Console.Write("bar"); };
-            //private static AutoResetEvent printFooBool = new AutoResetEvent(true);
-            private static AutoResetEvent print = new AutoResetEvent(true);
+            private Action printFoo = () => { Console.Write("foo"); }; // not required on leetcode
+            private Action printBar = () => { Console.Write("bar"); }; // not required on leetcode
+            private static AutoResetEvent printFooEvent = new AutoResetEvent(true);
+            private static AutoResetEvent printBarEvent = new AutoResetEvent(false);
 
             public FooBar(int n)
             {
                 this.n = n;
-                Task.Factory.StartNew(() => Foo(printFoo));
-                Task.Factory.StartNew(() => Bar(printBar));
+                Task.Factory.StartNew(() => Foo(printFoo)); // not required on leetcode
+                Task.Factory.StartNew(() => Bar(printBar)); // not required on leetcode
             }
 
             public void Foo(Action printFoo)
@@ -32,10 +32,10 @@ namespace LeetCodeSolutions
 
                 for (int i = 0; i < n; i++)
                 {
-                    print.WaitOne();
+                    printFooEvent.WaitOne();
                     // printFoo() outputs "foo". Do not change or remove this line.
                     printFoo();
-                    print.Set();
+                    printBarEvent.Set();
                 }
             }
 
@@ -44,10 +44,10 @@ namespace LeetCodeSolutions
 
                 for (int i = 0; i < n; i++)
                 {
-                    print.WaitOne();
+                    printBarEvent.WaitOne();
                     // printBar() outputs "bar". Do not change or remove this line.
                     printBar();
-                    print.Set();
+                    printFooEvent.Set();
                 }
             }
         }

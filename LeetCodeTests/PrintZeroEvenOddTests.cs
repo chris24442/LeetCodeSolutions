@@ -38,6 +38,47 @@ namespace LeetCodeTests
             }
         }
 
+        [TestMethod]
+        public void PrintZeroEvenOddTest3()
+        {
+            using (StringWriter sw = new StringWriter())
+            {
+                Console.SetOut(sw);
+
+                var a = new LeetCodeSolutions.ZeroEvenOdd(7);
+                Thread.Sleep(500);
+                string expected = string.Format("01020304050607");
+                Assert.AreEqual<string>(expected, sw.ToString());
+            }
+        }
+
+        [TestMethod]
+        public void PrintZeroEvenOddTest4()
+        {
+            using (StringWriter sw = new StringWriter())
+            {
+                Console.SetOut(sw);
+
+                var a = new LeetCodeSolutions.ZeroEvenOdd(2);
+                Thread.Sleep(500);
+                string expected = string.Format("0102");
+                Assert.AreEqual<string>(expected, sw.ToString());
+            }
+        }
+
+        [TestMethod]
+        public void PrintZeroEvenOddTest5()
+        {
+            using (StringWriter sw = new StringWriter())
+            {
+                Console.SetOut(sw);
+
+                var a = new LeetCodeSolutions.ZeroEvenOdd(1);
+                Thread.Sleep(500);
+                string expected = string.Format("01");
+                Assert.AreEqual<string>(expected, sw.ToString());
+            }
+        }
 
     }
 }

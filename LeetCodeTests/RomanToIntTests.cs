@@ -9,7 +9,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void RomanToIntExampleTest1()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             int result = program.RomanToInt("III");
 
@@ -19,7 +19,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void RomanToIntExampleTest2()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             int result = program.RomanToInt("LVIII");
 
@@ -29,7 +29,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void RomanToIntExampleTest3()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             int result = program.RomanToInt("MCMXCIV");
 
@@ -46,7 +46,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void RomanToIntUpToTenTest()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             Assert.AreEqual(1, program.RomanToInt("I"));
             Assert.AreEqual(2, program.RomanToInt("II"));
@@ -63,7 +63,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void RomanToIntUpTo20Test()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             Assert.AreEqual(11, program.RomanToInt("XI"));
             Assert.AreEqual(12, program.RomanToInt("XII"));
@@ -80,7 +80,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void RomanToIntUpTo100Test()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             Assert.AreEqual(21, program.RomanToInt("XXI"));
             Assert.AreEqual(22, program.RomanToInt("XXII"));
@@ -99,7 +99,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void RomanToIntUpTo1000Test()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             Assert.AreEqual(101, program.RomanToInt("CI"));
             Assert.AreEqual(102, program.RomanToInt("CII"));
@@ -117,7 +117,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void RomanToIntUpTo5000Test()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             Assert.AreEqual(1001, program.RomanToInt("MI"));
             Assert.AreEqual(1002, program.RomanToInt("MII"));

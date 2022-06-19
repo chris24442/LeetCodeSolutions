@@ -9,7 +9,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void NumberToWordsExampleTest1()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             string result = program.NumberToWords(123);
 
@@ -19,7 +19,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void NumberToWordsExampleTest2()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             string result = program.NumberToWords(12345);
 
@@ -30,7 +30,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void NumberToWordsExampleTest3()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             string result = program.NumberToWords(1234567);
 
@@ -40,7 +40,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void NumberToWordsErrorTest1()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             string result = program.NumberToWords(0);
 
@@ -50,7 +50,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void NumberToWordsErrorTest2()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             string result = program.NumberToWords(100);
 
@@ -60,7 +60,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void NumberToWordsErrorTest3()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             string result = program.NumberToWords(1000);
 
@@ -70,7 +70,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void NumberToWordsErrorTest4()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             string result = program.NumberToWords(1000000);
 

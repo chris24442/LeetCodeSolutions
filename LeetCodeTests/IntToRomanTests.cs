@@ -9,7 +9,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void IntToRomanExampleTest1()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             string result = program.IntToRoman(3);
 
@@ -19,7 +19,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void IntToRomanExampleTest2()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             string result = program.IntToRoman(58);
 
@@ -29,7 +29,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void IntToRomanExampleTest3()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             string result = program.IntToRoman(1994);
 
@@ -39,7 +39,7 @@ namespace LeetCodeTests
         [TestMethod]
         public void IntToRomanLeadingZeroesTest3()
         {
-            var program = new LeetCodeSolutions.Program();
+            var program = new LeetCodeSolutions.String18JUNE22();
 
             string result = program.IntToRoman(01994);
 

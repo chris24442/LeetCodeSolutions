@@ -21,7 +21,7 @@ namespace LeetCodeTests
             {
                 Console.SetOut(sw);
 
-                var a = new LeetCodeSolutions.Program.Foo();
+                var a = new LeetCodeSolutions.Concurrency19JUNE2022.Foo();
 
                 Task.Factory.StartNew(() => a.First(doWorkA));
                 Task.Factory.StartNew(() => a.Second(doWorkB));
@@ -41,7 +41,7 @@ namespace LeetCodeTests
             {
                 Console.SetOut(sw);
 
-                var a = new LeetCodeSolutions.Program.Foo();
+                var a = new LeetCodeSolutions.Concurrency19JUNE2022.Foo();
 
                 Task.Factory.StartNew(() => a.First(doWorkA));
                 Task.Factory.StartNew(() => a.Third(doWorkC));

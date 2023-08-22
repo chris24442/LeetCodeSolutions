@@ -45,6 +45,16 @@ namespace LeetCodeTests
 
             Assert.AreEqual("MCMXCIV", result);
         }
+
+        [TestMethod]
+        public void NewBrokenTest()
+        {
+            var program = new LeetCodeSolutions.String18JUNE22();
+
+            string result = program.IntToRoman(150);
+
+            Assert.AreEqual("III", result);
+        }
     }
 
 }
